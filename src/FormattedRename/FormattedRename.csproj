@@ -53,12 +53,10 @@
     <Compile Include="RenameParameter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="导入注册表.reg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.ico" />
+    <None Include="导入右键菜单注册表.reg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
