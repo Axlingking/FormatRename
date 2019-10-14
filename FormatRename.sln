@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormattedRename", "src\FormatRename\FormattedRename.csproj", "{BD69B3C0-ED87-4A14-8F69-D159E3E8AAD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormattedRename", "src\FormattedRename\FormattedRename.csproj", "{BD69B3C0-ED87-4A14-8F69-D159E3E8AAD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
