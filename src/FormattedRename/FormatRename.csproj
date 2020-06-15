@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BD69B3C0-ED87-4A14-8F69-D159E3E8AAD0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FormattedRename</RootNamespace>
-    <AssemblyName>FormattedRename</AssemblyName>
+    <RootNamespace>FormatRename</RootNamespace>
+    <AssemblyName>FormatRename</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileRename.cs" />
+    <Compile Include="Formaters\Formater.cs" />
+    <Compile Include="Formaters\IFormater.cs" />
     <Compile Include="ParameterResolver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,7 +58,9 @@
     <Content Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="导入右键菜单注册表.reg" />
+    <None Include="导入右键菜单注册表.reg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FormattedRename
+namespace FormatRename
 {
     public class RenameParameter
     {
@@ -15,6 +15,6 @@ namespace FormattedRename
         /// <summary>
         /// 用户名称
         /// </summary>
-        public string UserName { get; set; } = "曾子凌";
+        public string UserName { get; set; }
     }
 }
