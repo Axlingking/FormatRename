@@ -7,6 +7,6 @@ namespace FormatRename.Formaters
 {
     interface IFormater
     {
-        string Format(string value, string userName);
+        string Format(RenameParameter renameParameter);
     }
 }

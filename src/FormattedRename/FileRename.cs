@@ -1,4 +1,5 @@
 ﻿using FormatRename.Formaters;
+using System;
 using System.IO;
 
 namespace FormatRename
@@ -18,15 +19,20 @@ namespace FormatRename
 
         public void Rename(RenameParameter parameter)
         {
-            if (!File.Exists(parameter.FilePath)) return;
+            try
+            {
+                if (!File.Exists(parameter.FilePath)) return;
 
-            string fileName = Path.GetFileNameWithoutExtension(parameter.FilePath);
+                string formated = this.formater.Format(parameter);
 
-            string formated = this.formater.Format(fileName, parameter.UserName);
+                string newFilePath = Path.Combine(Path.GetDirectoryName(parameter.FilePath), formated);
 
-            string newFilePath = Path.Combine(Path.GetDirectoryName(parameter.FilePath), $"{formated}{Path.GetExtension(parameter.FilePath)}");
-
-            File.Move(parameter.FilePath, newFilePath);
+                File.Move(parameter.FilePath, newFilePath);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Write(ex.Message);
+            }
         }
     }
 }

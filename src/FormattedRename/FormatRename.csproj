@@ -49,6 +49,7 @@
     <Compile Include="FileRename.cs" />
     <Compile Include="Formaters\Formater.cs" />
     <Compile Include="Formaters\IFormater.cs" />
+    <Compile Include="LogHelper.cs" />
     <Compile Include="ParameterResolver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

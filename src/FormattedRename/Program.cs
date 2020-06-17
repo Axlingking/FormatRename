@@ -1,6 +1,7 @@
 ﻿using FormatRename.Formaters;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,19 +12,52 @@ namespace FormatRename
     {
         static void Main(string[] args)
         {
-            new FileRename(new Formater())
-                .Rename(new ParameterResolver().Resolve(args));
+            new FileRename(new Formater()).Rename(new ParameterResolver().Resolve(args));
 
-            //Console.WriteLine(new Formater().Format("name"));
-            //Console.WriteLine(new Formater().Format("name v1.0"));
-            //Console.WriteLine(new Formater().Format("name v1.0_20200615"));
-            //Console.WriteLine(new Formater().Format("namev1.0_20200615"));
-            //Console.WriteLine(new Formater().Format("name", "zzl"));
-            //Console.WriteLine(new Formater().Format("name v1.0", "zzl"));
-            //Console.WriteLine(new Formater().Format("name v1.0_20200615", "zzl"));
-            //Console.WriteLine(new Formater().Format("namev1.0_20200615", "zzl"));
+            #region 测试用例
 
-            //Console.ReadKey();
+            //string a1 = new Formater()
+            //        .Format(new RenameParameter
+            //        {
+            //            FilePath = "name",
+            //        });
+            //string a2 = new Formater()
+            //    .Format(new RenameParameter
+            //    {
+            //        FilePath = "name.txt",
+            //        User = "User"
+            //    });
+            //string a3 = new Formater()
+            //    .Format(new RenameParameter
+            //    {
+            //        FilePath = "name",
+            //        User = "User",
+            //        EnabledDate = false
+            //    });
+            //string a4 = new Formater()
+            //    .Format(new RenameParameter
+            //    {
+            //        FilePath = "name v1.0_20200615",
+            //    });
+            //string a5 = new Formater()
+            //    .Format(new RenameParameter
+            //    {
+            //        FilePath = "namev1.0_20200615",
+            //    });
+            //string a6 = new Formater()
+            //    .Format(new RenameParameter
+            //    {
+            //        FilePath = "name v1.0_20200615.txt",
+            //        UpdateDate = false
+            //    });
+            //string a7 = new Formater()
+            //    .Format(new RenameParameter
+            //    {
+            //        FilePath = "name v1.0_20200615.txt",
+            //        UpdateDate = true
+            //    });
+
+            #endregion
         }
     }
 }

@@ -5,25 +5,26 @@ using System.Text;
 
 namespace FormatRename
 {
-    public class ParameterResolver
+    class ParameterResolver
     {
         public RenameParameter Resolve(string[] args)
-        { 
+        {
             RenameParameter parameter = new RenameParameter();
 
-            if (args.Length == 1)
-                // 只传一个参数时
-                parameter.FilePath = args[0];
-            else
+            if (args.Length >= 1)
             {
-                for (int i = 0; i < args.Length; i++)
+                parameter.FilePath = args[0];
+
+                for (int i = 1; i < args.Length; i++)
                 {
                     string arg = args[i];
 
-                    if (arg == "--file" || arg == "-f")
-                        parameter.FilePath = args[i + 1];
-                    else if (arg == "--user" || arg == "-u")
-                        parameter.UserName = args[i + 1];
+                    if (arg == "--user")
+                        parameter.User = args[i + 1];
+                    if (arg == "--date")
+                        parameter.EnabledDate = true;
+                    else if (arg == "--updatedate")
+                        parameter.UpdateDate = true;
                 }
             }
 
