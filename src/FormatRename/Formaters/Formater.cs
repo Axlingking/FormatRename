@@ -37,7 +37,7 @@ namespace FormatRename.Formaters
                 {
                     // 更新日期
 
-                    result = $"{regexDate.Replace(fileName, "_" + BuildDateString())}";
+                    result = $"{regexDate.Replace(result, "_" + BuildDateString())}";
                 }
             }
             else

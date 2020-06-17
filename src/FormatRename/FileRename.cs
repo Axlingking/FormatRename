@@ -27,7 +27,10 @@ namespace FormatRename
 
                 string newFilePath = Path.Combine(Path.GetDirectoryName(parameter.FilePath), formated);
 
-                File.Move(parameter.FilePath, newFilePath);
+                if (!File.Exists(newFilePath))
+                {
+                    File.Move(parameter.FilePath, newFilePath);
+                }
             }
             catch (Exception ex)
             {
